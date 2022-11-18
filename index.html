@@ -4,9 +4,26 @@
     WELCOME TO MY WEBSITE
   </title>
   <style>
-    body{
-        background: #e3e3e3
-    }
+	  body, html {
+                height: 100%;
+                margin:0;
+            }
+          .img { 
+                background-image: url("https://picsum.photos/1500");
+                background-position: center center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-attachment: fixed;            
+                height:100%;
+          }
+          
+          @media only screen and (max-width: 760px) {
+  .img {
+    /* to improve page load speed on mobile internet connections */
+    background-image: url("https://picsum.photos/1500");
+  }
+}
+
     #loader{
 	position: fixed;
 	width: 100%;
@@ -14,6 +31,7 @@
 	background: #e3e3e3 url('https://i.pinimg.com/originals/66/d1/ee/66d1eecbb03cb25bac5a5e8d13a2ec58.gif') no-repeat center;
 	z-index: 999;
     }
+	  
   </style>
 </head>
 
@@ -22,7 +40,7 @@
     <div id="content">
         <!-- Everything in your body should go under here-->
         <h1>WELCOME TO MY WEBSITE</h1>
-	<img src="https://picsum.photos/1500" >
+	<div class="img"></div>
         <!-- End of body-->
     </div>
 
