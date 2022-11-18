@@ -7,8 +7,7 @@
 	  body, html {
                 height: 100%;
                 margin:0;
-            }
-          .img { 
+
                 background-image: url("https://picsum.photos/1500");
 		  
 		/** center the background image vertically and horizontally*/
@@ -21,18 +20,17 @@
                 background-size: cover;
 		  
 		/** fixed viewport against scroll ups and downs*/
-                background-attachment: fixed;  
-		  
-                height:100%;
+                background-attachment: fixed;    
           }
 	  
           /** for responsiveness: changing pictures after 760px, mostly same pcitures of small size is used.*/
           @media only screen and (max-width: 760px) {
-		  .img {
+		  body, html {
 		    /* to improve page load speed on mobile internet connections */
 		    background-image: url("https://picsum.photos/1500");
 		  }
-		}
+	   }
+	  
            /** loader page */
 	    #loader{
 		position: fixed;
@@ -49,17 +47,13 @@
     <!-- loader page -->
     <div id="loader"></div>
 	
-
-	
     <!-- content -->
     <div id="content">
         <!-- Everything in your body should go under here-->
         <h1>WELCOME TO MY WEBSITE</h1>
-	
-	<!-- background image -->
-        <div class="img"></div>
     </div>
 
+    <!-- script loader page-->
     <script>
      	let loader;
 	function loadNow(opacity) {
